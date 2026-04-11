@@ -63,6 +63,8 @@
       text-align: center;
       padding: 80px 20px;
       border-bottom: 1px solid #1e3a5f;
+      position: relative;
+      overflow: hidden;
     }
 
     .hero h2 {
@@ -77,6 +79,22 @@
       max-width: 600px;
       margin: 0 auto;
       line-height: 1.7;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://cdna.artstation.com/p/assets/images/images/064/230/006/large/edouard-pitula-dunkleosteus.jpg?1687421286');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
     }
 
     .badge-row {
@@ -143,6 +161,14 @@
       line-height: 1.6;
     }
 
+    nav span.disabled {
+      color: #2e4a63;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      cursor: not-allowed;
+    }
+
     footer {
       text-align: center;
       padding: 30px;
@@ -162,12 +188,12 @@
 
   <nav>
     <a href="#" class="active">Home</a>
-    <a href="#">Overview</a>
-    <a href="#">Fossil Record</a>
-    <a href="#">Anatomy</a>
-    <a href="#">Devonian Period</a>
-    <a href="#">Extinction</a>
-    <a href="#">Sources</a>
+    <a href="overview.html" class="active">Overview</a>
+    <span class="disabled">Fossil Record</span>
+    <span class="disabled">Anatomy</span>
+    <span class="disabled">Devonian Period</span>
+    <span class="disabled">Extinction</span>
+    <span class="disabled">Sources</span>
   </nav>
 
   <section class="hero">
