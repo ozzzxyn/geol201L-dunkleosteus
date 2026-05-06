@@ -18,6 +18,203 @@
     .content h2 { color: #a8d4f5; font-size: 1.8em; margin-bottom: 20px; }
     .content p { color: #7aaecf; line-height: 1.8; margin-bottom: 16px; }
     footer { text-align: center; padding: 30px; color: #3a6080; font-size: 0.85em; border-top: 1px solid #1e3a5f; margin-top: 60px; }
+
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #0a1628;
+      color: #d6e4f0;
+    }
+
+    header {
+      background-color: #0d1f3c;
+      border-bottom: 3px solid #2a6496;
+      padding: 40px 20px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #a8d4f5;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #112240;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 12px 20px;
+      border-bottom: 2px solid #1e3a5f;
+    }
+
+    nav a {
+      color: #a8d4f5;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #2a6496;
+      color: #ffffff;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #0d1f3c, #0a1628);
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 1px solid #1e3a5f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      color: #a8d4f5;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://cdna.artstation.com/p/assets/images/images/064/230/006/large/edouard-pitula-dunkleosteus.jpg?1687421286');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 40px 20px;
+    }
+
+    .badge {
+      background-color: #112240;
+      border: 1px solid #2a6496;
+      border-radius: 8px;
+      padding: 20px 30px;
+      text-align: center;
+      min-width: 160px;
+    }
+
+    .badge .label {
+      font-size: 0.8em;
+      color: #7aaecf;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge .value {
+      font-size: 1.2em;
+      color: #a8d4f5;
+      margin-top: 6px;
+      font-weight: bold;
+    }
+
+    .section-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #112240;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 28px 24px;
+      flex: 1 1 260px;
+      max-width: 1000px;
+    }
+
+    .card h3 {
+      color: #a8d4f5;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #2a6496;
+      padding-bottom: 8px;
+    }
+
+    .card p {
+      color: #7aaecf;
+      font-size: 1.4em;
+      line-height: 1.6;
+    }
+
+    .card p2 {
+      padding-bottom: 60px;
+      color: #437da1;
+      font-size: 1.23em;
+      line-height: 1.6;
+    }
+
+    nav span.disabled {
+      color: #2e4a63;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      cursor: not-allowed;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #3a6080;
+      font-size: 0.85em;
+      border-top: 1px solid #1e3a5f;
+      margin-top: 40px;
+    }
+
+    .div2 {
+      background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.macnconicet.gob.ar%2Fwp-content%2Fuploads%2Fdunkleosteussilueta-e1655573168857.jpg&f=1&nofb=1&ipt=46622aeb66d9f6c92f20422f266d54351265fd6afc01c7a7279092a0ea61fa2f');
+    }
+
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    padding: 20px;
+    }
+
+    img3 {
+      width: 50%;
+      height: auto;
+      padding: 30px;
+    }
+
   </style>
 </head>
 <body>
@@ -37,10 +234,30 @@
     <a href="sources.html" class="">Sources</a>
   </nav>
 
-  <div class="content">
-    <h2>Fossil Record</h2>
-    <p>Write your overview content here...</p>
+    
+<div class="section-cards">
+    <div class="card">
+      <h3>The Devonian Period</h3>
+      <p>The Devonian period lasted from around 419 to 359 millions years ago.</p>
+      <p>This period of time is often referred to as the <b>"Age of Fishes"</b> due to the vast amount of fish diversity that developed during this time. This period of time is when the Dunkleosteus became one of the top marine predators roaming the seas.</p>
+      
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fnatural.world%2Fimages%2Fdevonian%2520period.jpg&f=1&nofb=1&ipt=ee623a40e08cac399b8da1f449b7616c04af0884a85a2a170a0e5cd06980f6ba"></img>
+      <br></br>
+      <h3>Habitat</h3>
+      <p>Where the Dunkleosteus lived in was mainly in warm, but shallow seas. These seas at the time, covered large parts of continents, including <i>Euramerica</i> and parts of Gondwana.</p>
+      <p>The ecosystems in these oceans had massive reef systems which were made up of Corals and Stromatoporoids. These reefs created many vast ecosystems and supported a large food web. Providing plenty of hunting for predators, such as the Dunkleosteus. The water conditions that it mainly resided in was Warm with some areas of the sea varying in low oxygen, typically in deeper waters.</p>
+      <p>With the seas so diverse at the time, it had many different fish life which include Placoderms, Early Sharks, Lobe-finned fish, and Ray-finned fish. This is why this period is given the name of <b>"Age of Fishes"</b>.</p>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F32%2F53%2F02%2F325302d06819724122f72116fb5522b1.jpg&f=1&nofb=1&ipt=a0fbf439a1ff22efa725aabc74105be9eef4050c84094a60175d4ab96a1c7c9b"></img>
+      <p>With invertebrates making up the base of the food chain. Though the Dunkleosteus was marine, the land was also changing too. The first forests had appeared during this period, early plants spread all over the different continents. Four limbed vertebrates or tetrapods had also been roaming around this time. Even if these changes are land changes, they still affected the seas, likely causing oxygen fluctuations and the increase of nutrients into the oceans.</p>
+      <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fnaturedocumentaries.org%2Fwp-content%2Fuploads%2F2018%2F01%2FDevonianForest.jpg&f=1&nofb=1&ipt=69c47b7a98a14e8b20168d630bf60ffcbbc1e4a5809b4182a6496a72a843193d"></img>
+      <br></br>
+      <h3>The End?</h3>
+      <p>The end of this period, the Late Devonian had come. Which had the Late Devonian extinction. This extinction caused many reef systems to collapse and having my marine species disappearing. Placoderms who were so prominent in the Devonian, they went extinct during this end of this period. Including the Dunkleosteus had gone extinct.</p>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.britannica.com%2F42%2F79542-050-F6EFCB43%2Ffamilies-diversity-animal-data-Precambrian-curve-value.jpg&f=1&nofb=1&ipt=463ab02f42cdf8b5d467718f6cf1aed1505968bd853a0e1b8e32b7f2b2f5e66d"></img>
+    </div>
   </div>
+
+
 
   <footer>
     Geology 201L &nbsp;|&nbsp; Draft Website &nbsp;|&nbsp; Dunkleosteus terrelli

@@ -18,6 +18,195 @@
     .content h2 { color: #a8d4f5; font-size: 1.8em; margin-bottom: 20px; }
     .content p { color: #7aaecf; line-height: 1.8; margin-bottom: 16px; }
     footer { text-align: center; padding: 30px; color: #3a6080; font-size: 0.85em; border-top: 1px solid #1e3a5f; margin-top: 60px; }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #0a1628;
+      color: #d6e4f0;
+    }
+
+    header {
+      background-color: #0d1f3c;
+      border-bottom: 3px solid #2a6496;
+      padding: 40px 20px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #a8d4f5;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #112240;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 12px 20px;
+      border-bottom: 2px solid #1e3a5f;
+    }
+
+    nav a {
+      color: #a8d4f5;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #2a6496;
+      color: #ffffff;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #0d1f3c, #0a1628);
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 1px solid #1e3a5f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      color: #a8d4f5;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://cdna.artstation.com/p/assets/images/images/064/230/006/large/edouard-pitula-dunkleosteus.jpg?1687421286');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 40px 20px;
+    }
+
+    .badge {
+      background-color: #112240;
+      border: 1px solid #2a6496;
+      border-radius: 8px;
+      padding: 20px 30px;
+      text-align: center;
+      min-width: 160px;
+    }
+
+    .badge .label {
+      font-size: 0.8em;
+      color: #7aaecf;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge .value {
+      font-size: 1.2em;
+      color: #a8d4f5;
+      margin-top: 6px;
+      font-weight: bold;
+    }
+
+    .section-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #112240;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 28px 24px;
+      flex: 1 1 260px;
+      max-width: 1000px;
+    }
+
+    .card h3 {
+      color: #a8d4f5;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #2a6496;
+      padding-bottom: 8px;
+    }
+
+    .card p {
+      color: #7aaecf;
+      font-size: 1.4em;
+      line-height: 1.6;
+    }
+
+    .card p2 {
+      padding-bottom: 60px;
+      color: #437da1;
+      font-size: 1.23em;
+      line-height: 1.6;
+    }
+
+    nav span.disabled {
+      color: #2e4a63;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      cursor: not-allowed;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #3a6080;
+      font-size: 0.85em;
+      border-top: 1px solid #1e3a5f;
+      margin-top: 40px;
+    }
+
+    .div2 {
+      background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.macnconicet.gob.ar%2Fwp-content%2Fuploads%2Fdunkleosteussilueta-e1655573168857.jpg&f=1&nofb=1&ipt=46622aeb66d9f6c92f20422f266d54351265fd6afc01c7a7279092a0ea61fa2f');
+    }
+
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -37,10 +226,28 @@
     <a href="sources.html" class="">Sources</a>
   </nav>
 
-  <div class="content">
-    <h2>Fossil Record</h2>
-    <p>Write your overview content here...</p>
+  <div class="section-cards">
+    <div class="card">
+      <h3>Dunkleosteus Anatomy</h3>
+      <p>The Dunkleosteus mainly belonged to a group called <i>Placodermi</i> which means "plate-skinned".</p>
+      <p>The front half of it's body consists of thick bony armor plates, which formed a rigid head shield and a thoracic shield or chest shield. These armor pirces were connected by joints, which allowed some movement instead of being completely rigid. With the other half of it's body being made of softer tissue and muscle.</p>
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5ac41d41-f681-45c9-a7ca-86fecac6df8f/dbc8g85-e8d28085-5711-4e68-a2fc-d083fae95612.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiIvZi81YWM0MWQ0MS1mNjgxLTQ1YzktYTdjYS04NmZlY2FjNmRmOGYvZGJjOGc4NS1lOGQyODA4NS01NzExLTRlNjgtYTJmYy1kMDgzZmFlOTU2MTIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.YGMdJ6Y7vqsS46Y2VObqOJBsvTWcTV9CAi4GJEvGx5U"></img>
+      
+      
+      <p>A distinct feature it has was it doesn't have any real teeth, or what would be considered "true teeth". It had self-sharpening bony plates which functioned like blades. These blades are what formed a sharp upper jaw plate and a lower jaw that acted similar to a slicing tool.</p>
+      <br></br>
+      <p>This jaw system it had was specialized, it used a four-bar linkage system (or a mechanical joint system). This system allowed the mouth to open very quickly and allowed to generated powerful biting force.</p>
+    </div>
+
+    <div class="card">
+      <p>Studies from scientists have estimated it's biting force to be up to about <b>~6,000 Newtons</b> of force, which is around 1,300+ pounds of force.</p>
+      <p>When it comes to size and body proportions, this was briefly covered in the <i>Overview</i> page, but it's length was estimated to be around 3.1 m to 10 m long, with the head being around 1 meter long on it's own. With the head being large, it was heavily built.</p>
+      <br></br>
+      <p>Even though scientists haven't found a complete fossil, they think that it likely had what's called Paired prectoral fins and a powerful tail fin, being a fast and active swimmer. These features are present on fish like placoderms who is thought to be related to the Dunkleosteusm, as Placoderms were the first fish to have jaws and paired fins.</p>
+      <img src="https://palaeo-electronica.org/content/images/1343/figure1.jpg"></img>
+    </div>
   </div>
+
 
   <footer>
     Geology 201L &nbsp;|&nbsp; Draft Website &nbsp;|&nbsp; Dunkleosteus terrelli
