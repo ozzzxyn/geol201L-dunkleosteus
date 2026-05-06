@@ -18,6 +18,194 @@
     .content h2 { color: #a8d4f5; font-size: 1.8em; margin-bottom: 20px; }
     .content p { color: #7aaecf; line-height: 1.8; margin-bottom: 16px; }
     footer { text-align: center; padding: 30px; color: #3a6080; font-size: 0.85em; border-top: 1px solid #1e3a5f; margin-top: 60px; }
+    body {
+      font-family: Georgia, serif;
+      background-color: #0a1628;
+      color: #d6e4f0;
+    }
+
+    header {
+      background-color: #0d1f3c;
+      border-bottom: 3px solid #2a6496;
+      padding: 40px 20px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #a8d4f5;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      margin-top: 8px;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #112240;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 12px 20px;
+      border-bottom: 2px solid #1e3a5f;
+    }
+
+    nav a {
+      color: #a8d4f5;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+
+    nav a:hover, nav a.active {
+      background-color: #2a6496;
+      color: #ffffff;
+    }
+
+    .hero {
+      background: linear-gradient(to bottom, #0d1f3c, #0a1628);
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 1px solid #1e3a5f;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      color: #a8d4f5;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      color: #7aaecf;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url('https://cdna.artstation.com/p/assets/images/images/064/230/006/large/edouard-pitula-dunkleosteus.jpg?1687421286');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.3);
+      z-index: 0;
+    }
+
+    .hero h2, .hero p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 40px 20px;
+    }
+
+    .badge {
+      background-color: #112240;
+      border: 1px solid #2a6496;
+      border-radius: 8px;
+      padding: 20px 30px;
+      text-align: center;
+      min-width: 160px;
+    }
+
+    .badge .label {
+      font-size: 0.8em;
+      color: #7aaecf;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .badge .value {
+      font-size: 1.2em;
+      color: #a8d4f5;
+      margin-top: 6px;
+      font-weight: bold;
+    }
+
+    .section-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background-color: #112240;
+      border: 1px solid #1e3a5f;
+      border-radius: 8px;
+      padding: 28px 24px;
+      flex: 1 1 260px;
+      max-width: 1000px;
+    }
+
+    .card h3 {
+      color: #a8d4f5;
+      font-size: 1.1em;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #2a6496;
+      padding-bottom: 8px;
+    }
+
+    .card p {
+      color: #7aaecf;
+      font-size: 1.4em;
+      line-height: 1.6;
+    }
+
+    .card p2 {
+      padding-bottom: 60px;
+      color: #437da1;
+      font-size: 1.23em;
+      line-height: 1.6;
+    }
+
+    nav span.disabled {
+      color: #2e4a63;
+      padding: 10px 22px;
+      border-radius: 4px;
+      font-size: 0.95em;
+      cursor: not-allowed;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #3a6080;
+      font-size: 0.85em;
+      border-top: 1px solid #1e3a5f;
+      margin-top: 40px;
+    }
+
+    .div2 {
+      background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.macnconicet.gob.ar%2Fwp-content%2Fuploads%2Fdunkleosteussilueta-e1655573168857.jpg&f=1&nofb=1&ipt=46622aeb66d9f6c92f20422f266d54351265fd6afc01c7a7279092a0ea61fa2f');
+    }
+
+    img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+    padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -37,13 +225,29 @@
     <a href="sources.html" class="">Sources</a>
   </nav>
 
-  <div class="content">
-    <h2>Fossil Record</h2>
-    <p>Write your overview content here...</p>
+  <div class="section-cards">
+    <div class="card">
+      <h3>Extinction</h3>
+      <p>The Dunkleosteus had disappeared during the end of the Devonian Period. During the <i>Late Devonian</i>. Though as sudden as it sounds, it was a series of extinctions that happened over millions of years.</p>
+      <p>Scientists believed the extinction was due to a combination of environmental changes rather than just one cause. The ocean had lost oxygen, through a something called anoxia. These large parts of the oceans had become low in oxygen, leaving lots of different marine animals not surviving this low of a oxygen level. Even ecosystems that were mainly bottom-dwelling had collapsed which in turn, affects the survival of the Dunkleosteus.</p>
+      
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fskepticalscience.com%2Fpics%2FOceanAnoxianormal2-medium.gif&f=1&nofb=1&ipt=28548a7b973715209df180a6a0ba179db7500ae417e852909fc328deb45021ad"></img>
+      <br></br>
+      <h3>Climate Change</h3>
+      <p>The Devonian climate began to cool over time, with Glaciation (ice formation) possibly occuring in this time. Climate change such as this affects the sea level, leading to it dropping with shallow habitats shrinking. The reefs of the Devonian were some of the largest reefs in all of Earth's history with them collapsing because of the major change in climate. Food webs broke down and many predators lost their sources to prey on and survive.</p>
+      <p>Though the expansion of earth forests increased, soil began to form and nutrients expanded into the oceans. Causing possible algal blooms, and further worsened the oxygen in the ocean.</p>
+      <p></p>
+      <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.mos.cms.futurecdn.net%2FSXTQU5w4UJsYcZmUWfBfqF.jpg&f=1&nofb=1&ipt=b31af1d5e1e07557a8d51fb9e95c4e6505bb0c3432b1d45f5b6730ccdd6e5c25"></img>
+      <p>With invertebrates making up the base of the food chain. Though the Dunkleosteus was marine, the land was also changing too. The first forests had appeared during this period, early plants spread all over the different continents. Four limbed vertebrates or tetrapods had also been roaming around this time. Even if these changes are land changes, they still affected the seas, likely causing oxygen fluctuations and the increase of nutrients into the oceans.</p>
+      <br></br>
+      <h3>Survival</h3>
+      <p>The Dunkleosteus as said before, didn't survive the previously described climate change as it affected many species that were alive during this time. In order for the Dunkleosteus to survive, it needed large amounts of food at a time, heavily depending on stable marine ecosystems with shallow waters heavily being affected. Less prey mean't less food to prey on.</p>
+      <img src="https://www.fossilguy.com/gallery/vert/placoderm/dunkleosteus/dunkleosteus_by_johnson_mortimer_de6c5x9-web.jpg"></img>
+    </div>
   </div>
 
   <footer>
-    Geology 201L &nbsp;|&nbsp; Draft Website &nbsp;|&nbsp; Dunkleosteus terrelli
+    Geology 201L &nbsp;|&nbsp; Osvaldo Ramirez &nbsp;|&nbsp; Dunkleosteus terrelli
   </footer>
 
 </body>
